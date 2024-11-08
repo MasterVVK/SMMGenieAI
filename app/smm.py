@@ -6,7 +6,12 @@ from generators.image_gen import ImageGenerator
 from social_publishers.vk_publisher import VKPublisher
 from social_stats.vk_stats import VKStats
 from config import openai_key
+from config import conf
+import os
 
+# Установка прокси перед инициализацией классов
+os.environ["http_proxy"] = conf.http_proxy
+os.environ["https_proxy"] = conf.https_proxy
 
 smm_bp = Blueprint('smm', __name__)
 
