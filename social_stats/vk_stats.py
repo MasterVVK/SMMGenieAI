@@ -42,3 +42,4 @@ class VKStats:
             raise Exception(response['error']['error_msg'])
         else:
             return response['response']['count']
+
